@@ -1,0 +1,24 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "boxing-club-paphos"
+    },
+    {
+      "url": "boxing-club-paphos"
+    }
+  ],
+  "env": {
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "boxing_club_paphos",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
