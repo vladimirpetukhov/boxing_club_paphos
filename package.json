@@ -1,5 +1,5 @@
 {
-  "name": "demo-server",
+  "name": "boxing_club_paphos",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vladimir Petukhov",
   "license": "MIT",
   "dependencies": {
     "body-parser": "1.18.3",
