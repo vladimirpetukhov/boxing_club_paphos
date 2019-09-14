@@ -1,10 +1,26 @@
+var user=require('../models/User')
+const db=require('mongoose');
+const userService=require('../services/user-services');
+
 class UsersController {
+    
+    constructor(){
+        
+    }
     async registerGet(req, res) {
-        res.render('user/register');
+        
+        let users=userService.getUser;
+        res.render('user/register',{
+            username:users.username
+        });
+        console.log(users);
+        
     }
 
     async registerPost(req, res) {
-        res.send('Users Post');
+        
+        res.send(req.body);
+        
     }
 
     async loginGet(req, res) {

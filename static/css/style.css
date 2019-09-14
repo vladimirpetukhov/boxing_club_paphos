@@ -419,13 +419,6 @@ video {
       padding: 40px 250px 20px 78px;
   }
   
-  .footer-menu {
-      padding: 0;
-      list-style: none;
-      border-bottom: 1px solid #2a2a2a;
-      padding-bottom: 20px;
-      margin-bottom: 40px;
-  }
   
       .footer-menu li {
           display: inline-block;
