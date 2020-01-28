@@ -1,0 +1,42 @@
+.left-panel .dropright a:hover{
+    background-color:transparent;
+    color: brown;
+    cursor: pointer;
+}
+
+
+
+.left-panel .dropright a{
+    background-color:transparent;    
+    border: none;
+    font-weight: bold;
+    
+}
+
+div.left-panel i:hover{
+    color: brown;
+    -moz-transform: scale(1.4);
+-webkit-transform: scale(1.4);
+-o-transform: scale(1.4);
+-ms-transform: scale(1.4);
+transform: scale(1.4);
+}
+
+@media (max-width: 1480px) {
+    
+}
+
+@media (max-width: 480px) {}
+
+@media (min-width: 480px) and  (max-width:768px) {}
+
+@media screen and (min-width:1080px) {}
+
+@media (min-width:768px){}
+
+@media (min-width:768px) and (max-width:990px) {}
+
+@media (min-width:990px) and (max-width:1080px) {}
+
+@media (min-width: 1480px) {}
+

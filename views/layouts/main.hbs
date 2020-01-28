@@ -1,0 +1,178 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxing Club Paphos</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="/css/styles.css" type="text/css" rel="stylesheet">
+    <link href="/css/animate.css" type="text/css" rel="stylesheet">
+    <link href="/css/main.css" type="text/css" rel="stylesheet">
+    <link href="/css/register.css" type="text/css" rel="stylesheet">
+    <link href="/fontawesome/css/all.css" type="text/css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/favicon.ico" type="image/x-icon" href="">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<html>
+
+<body>
+    <!--Left Panel-->
+
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TR3HB8F" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+
+        <script>
+            $(document).ready(function () {
+                $(window).bind('scroll', function () {
+                    var navHeight = 99;
+                    if ($(window).scrollTop() > navHeight) {
+                        $('.logo').addClass('navbar_fixed');
+                        $('#hided').show();
+                        $('#dbpad').show();
+                    }
+                    else {
+                        $('.logo').removeClass('navbar_fixed');
+                        $('#hided').hide();
+                        $('#dbpad').hide();
+                    }
+                });
+            });
+        </script>
+
+        <div id="fb-root"></div>
+        <script>
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v3.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+
+        <header class="pb-0">
+            <div class="container p-0 m-0 ">
+                <div class="row p-0">
+                    <div class="col-12 p-0">
+                        <div class="logo ml-md-5 ml-sm-3">
+                            <a href="/">Boxing Club <span>Paphos</span></a>
+                        </div>
+                    </div>
+
+                    <div class="offset-md-8 offset-sm-6 offset-1 col-md-4 col-sm-8 col-11">
+                        <div class="">
+                            <a href="javascript:void(0)" class="ham-burger">
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                        <div class="nav">
+                            <ul style="width: 100%;">
+                                <li><a href="/home">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/services">Services</a></li>
+                                <li><a href="/classes">Classes</a></li>
+                                <li><a href="/trainings">Schedule</a></li>
+                                <li><a href="/events">Events</a></li>
+                                <li><a href="/gallery">Gallery</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </header>
+        {{{body}}}
+        </div>
+        {{> footer}}
+    </body>
+
+</html>
+<script>
+    $(document).ready(function () {
+
+        $(".ham-burger, .nav ul li a").click(function () {
+
+            $(".nav").toggleClass("open")
+
+            $(".ham-burger").toggleClass("active");
+        })
+        $(".accordian-container").click(function () {
+            $(".accordian-container").children(".body").slideUp();
+            $(".accordian-container").removeClass("active")
+            $(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+            $(this).children(".body").slideDown();
+            $(this).addClass("active")
+            $(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+        })
+
+        $(".nav ul li a, .go-down").click(function (event) {
+            if (this.hash !== "") {
+
+                event.preventDefault();
+
+                var hash = this.hash;
+
+                $('html,body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+                    window.location.hash = hash;
+                });
+
+                // add active class in navigation
+                $(".nav ul li a").removeClass("active")
+                $(this).addClass("active")
+            }
+        })
+    })
+
+</script>
+
+<!-- <script>
+    wow = new WOW(
+        {
+            animateClass: 'animated',
+            offset: 0,
+        }
+    );
+    wow.init();
+</script> -->
+
+
+
+</body>
+
+</html>
